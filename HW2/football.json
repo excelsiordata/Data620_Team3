@@ -1,0 +1,17 @@
+Last login: Wed Jun 14 16:47:16 on ttys000
+DigitalMarketer1977s-MacBook-Pro:~ digitalmarketer1977$ python
+Python 2.7.13 |Anaconda custom (x86_64)| (default, Dec 20 2016, 23:05:08) 
+[GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+Anaconda is brought to you by Continuum Analytics.
+Please check out: http://continuum.io/thanks and https://anaconda.org
+>>> import networkx as nx
+>>> import urllib                                          
+>>> url = "http://networkdata.ics.uci.edu/data/football/football.gml"
+>>> f = urllib.urlopen(url)
+>>> myfile = f.read()
+>>> #print myfile
+>>> G=nx.path_graph(115)
+>>> G = nx.read_gml(myfile)
+>>> G.node
+>>> G.edge
